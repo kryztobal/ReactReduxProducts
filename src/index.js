@@ -6,7 +6,9 @@ import store from './store';
 import { Provider } from 'react-redux';
 import { loadProducts } from './actionsCreator';
 
-store.dispatch(loadProducts());
+store.dispatch(loadProducts()).then(() => {
+  console.log('Done!')
+});
 
 
 ReactDOM.render(
